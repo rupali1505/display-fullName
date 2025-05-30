@@ -17,8 +17,9 @@ export default function DisplayName() {
 
   const submitData = (e) => {
     e.preventDefault();
+    setFormData(`${displayForm.firstName}, ${displayForm.lastName}`)
+    setDisplayForm({ firstName: "", lastName: "" })
 
-    setFormData(`${displayForm.firstName}, ${displayForm.lastName}`);
   };
 
   return (
@@ -55,14 +56,11 @@ export default function DisplayName() {
 
           <button>Submit</button>
         </form>
-        {formData ? (
-          <p>
-            Full Name: {displayForm.firstName} {displayForm.lastName}.
-          </p>
-        ) : null}
+           {formData && <p>Full Name: {formData}</p>}
+       
       </div>
     </>
-  );
+  )
 }
 
 

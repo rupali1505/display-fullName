@@ -1,4 +1,4 @@
-
+import DisplayName from './DisplayFullname.jsx'
 
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-     
+    <DisplayName />
     </>
   )
 }
